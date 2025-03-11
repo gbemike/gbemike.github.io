@@ -1,138 +1,308 @@
-<!DOCTYPE HTML>
-<!--
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Gbemike Olowe Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Gbemike Olowe Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-		<!-- Wrapper -->
-			<div id="wrapper" class="fade-in">
+  <!-- Bootstrap 5 (Local) -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
 
-				<!-- Intro -->
-					<div id="intro">
-						<h1>Welcome<br />
-						to my Portfolio</h1>
-						<p>My name is Oluwagbemike Olowe<a href="https://html5up.net/license"></a></p>
-						<ul class="actions">
-							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
-						</ul>
-					</div>
+  <!-- Custom Styles -->
+  <style>
+    /* ------------------------------
+       NAVBAR
+    ------------------------------ */
+    .navbar-brand {
+      font-weight: 600;
+      font-size: 1.25rem;
+    }
 
-				<!-- Header -->
-					<header id="header">
-						<a href="index.html" class="logo">Projects</a>
-					</header>
+    /* ------------------------------
+       HERO / INTRO SECTION
+    ------------------------------ */
+    .hero-section {
+      position: relative;
+      background: url("assets/images/hero-bg.jpg") center/cover no-repeat;
+      color: #fff;
+      padding: 6rem 1rem;
+      text-align: center;
+    }
+    .hero-section::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.4); /* Dark overlay for text contrast */
+      z-index: 1;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2; /* Ensures text sits above the overlay */
+    }
+    .hero-title {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    .hero-text {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: 0 auto 2rem auto;
+    }
 
-				<!-- Nav -->
-					<nav id="nav">
-						<ul class="links">
-							<li class="active"><a href="index.html">Home</a></li>
-						</ul>
-						<ul class="icons">
-							<li><a href="https://github.com/gbemike" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-						</ul>
-					</nav>
+    /* ------------------------------
+       ABOUT SECTION
+    ------------------------------ */
+    .about-section img.about-pic {
+      width: 220px;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    .about-section .col-md-4 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .about-section .col-md-8 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
 
-				<!-- Main -->
-					<div id="main">
+    /* ------------------------------
+       FOOTER
+    ------------------------------ */
+    footer {
+      background-color: #343a40;
+      color: #fff;
+      padding: 1.5rem 0;
+    }
+    footer a {
+      color: #0d6efd;
+      text-decoration: none;
+    }
+    footer a:hover {
+      color: #fff;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
 
-						<!-- Featured Post -->
-							<article class="post featured">
-								<header class="major">
-									<!--<h2><a href="#"></a></h2>-->
-									<p href="" class="image"><img src="images/ptf.jpg" alt="" /></p>
-									<p>I am looking for an opportunity to utilize and enhance my professional and technical skills.
-										I am passionate about the responsible deployment of artificial intelligence in Nigeria to tackle a variety of problems.
-										The reason for my desire to learn and pursue a career in the data science field stems from it being a field which was
-										designed to develop and improve the society around us.
-										Nigeria has so many areas in which data science and Artificial Intelligence could be deployed to help the country for the better.
-										The continuous cycle of learning about different things and tackling a various range of problems drives me. This website showcases a few projects I've completed and learned from during my Artificial Intelligence Journey</p>
-								</header>
-								<ul class="actions special">
-									<li><a href="Olowe Oluwagbemike Resume.pdf" class="button large" download="">Link to Resume</a></li>
-								</ul>
-							</article>
+  <!-- NAVBAR (fixed at top) -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Gbemike Olowe</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto">
+          <!-- If you want a link to the About section in the nav, add it below -->
+          <!-- <li class="nav-item"><a class="nav-link" href="#about">About</a></li> -->
+          <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://github.com/gbemike" target="_blank">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-						<!-- Posts -->
-							<section class="posts">
-								<article>
-									<header>
-										<h2><a href="https://github.com/gbemike/itemBasedCollabFiltering/blob/main/itemBasedCf.ipynb">
-											Implementing Item Based <br />
-											Collaborative Filtering By Recommending Movies</a></h2>
-									</header>
-									<a href="https://github.com/gbemike/itemBasedCollabFiltering/blob/main/itemBasedCf.ipynb" class="image fit"><img src="images/rec.jpeg" alt="" /></a>
-									<p>In collaborative we observe the interactions between users and items to build knowledge on user preference and be able to find 
-										similar users to recommend to.</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/gbemike/itemBasedCollabFiltering/blob/main/itemBasedCf.ipynb" class="button">View Project</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<h2><a href="https://github.com/gbemike/EssayGradingNLP/blob/main/final_projct.ipynb">Automatic Grading of Essay Questions <br />
-											using Machine Learning</a></h2>
-									</header>
-									<a href="https://github.com/gbemike/EssayGradingNLP/blob/main/final_projct.ipynb" class="image fit"><img src="images/web.png" alt="" /></a>
-									<p>
-										A machine learning model that grades answers to essay questions. The dataset used was based on economics questions.
-									</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/gbemike/EssayGradingNLP/blob/main/final_projct.ipynb" class="button">View Project</a></li>
-									</ul>
-								</article>
-							</section>
-					</div>
+  <!-- HERO SECTION -->
+  <section class="hero-section" id="hero">
+    <div class="hero-content">
+      <h1 class="hero-title">Welcome to My Portfolio</h1>
+      <p class="hero-text">
+        My name is <strong>Gbemike Olowe</strong>. I’m a chill Data and AI Engineer.
 
-				<!-- Footer -->
-					<footer id="footer">
+      </p>
+      <a href="assets/docs/Gbemike _Olowe_Resume.pdf" download class="btn btn-primary btn-lg">
+        Download My Resume
+      </a>
+    </div>
+  </section>
 
-						<section class="split contact">
-							<section class="alt">
-								<h3>Location</h3>
-								<p>Nigeria<br/></p>
-							</section>
-							<section>
-								<h3>Phone</h3>
-								<p>+2347064852647</p>
-							</section>
-							<section>
-								<h3>Email</h3>
-								<p>gbemikeolowe02@gmail.com</p>
-							</section>
-							<section>
-								<h3>Social</h3>
-								<ul class="icons alt">
-									<li><a href="https://github.com/gbemike" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-								</ul>
-							</section>
-						</section>
-					</footer>
+  <!-- Spacer to avoid hero being hidden behind navbar -->
+  <div style="height: 80px;"></div>
 
-				<!-- Copyright
-					<div id="copyright">
-						<ul><li>&copy;</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
-					</div> -->
+  <!-- ABOUT SECTION -->
+  <section class="container about-section mb-5" id="about">
+    <div class="row">
+      <!-- Profile Pic -->
+      <div class="col-md-4">
+        <img src="assets/images/dp.jpg" alt="Profile Picture" class="about-pic" />
+      </div>
+      <!-- About Text -->
+      <div class="col-md-8">
+        <h2 class="mb-3">About Me</h2>
+        <p>
+          Hello! I’m <strong>Gbemike</strong>, a chill Data and AI Engineer.
+        </p>
+        <p>
+			I’ve built pipelines for everything from finance to sports analytics—always aiming for slick automation and real-time responsiveness. 
+			I’m also passionate about making sure AI benefits real people (especially here in Nigeria) by tackling practical challenges. 
+			Stick around to explore some of my favorite projescts, and feel free to reach out if you’d like to connect! Outside of tech, 
+			I play a lot basketball at least twice a week and game basically everyday.
+        </p>
+      </div>
+    </div>
+  </section>
 
-			</div>
+  <!-- PROJECTS SECTION -->
+  <section class="container mb-5" id="projects">
+    <header class="text-center my-5">
+      <h2 style="font-size: 2rem; font-weight: 700;">Featured Projects</h2>
+      <p>Explore some of my works</p>
+    </header>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+    <!-- Grid: two columns per row on md+ screens -->
+    <div class="row g-4">
+      <!-- Project #1 -->
+      <div class="col-md-6">
+        <div class="card h-100 shadow-sm">
+          <img src="assets/images/rec.jpeg" class="card-img-top" alt="Movie Recommendation">
+          <div class="card-body">
+            <h5 class="card-title">Implementing Item-Based Collaborative Filtering</h5>
+            <p class="card-text">
+              This project demonstrates how user-item interactions can be leveraged 
+              to build recommendation systems using item-based collaborative filtering. 
+              By analyzing user preferences and similarities between items, the system 
+              recommends relevant content aligned with individual user tastes.
+            </p>
+          </div>
+          <div class="card-footer bg-white border-top-0">
+            <a href="https://github.com/gbemike/itemBasedCollabFiltering/blob/main/itemBasedCf.ipynb"
+              class="btn btn-outline-primary" target="_blank">
+              View Project
+            </a>
+          </div>
+        </div>
+      </div>
 
-	</body>
+      <!-- Project #2 -->
+      <div class="col-md-6">
+        <div class="card h-100 shadow-sm">
+          <img src="assets/images/web.png" class="card-img-top" alt="Essay Grading">
+          <div class="card-body">
+            <h5 class="card-title">Automated Essay Grading with NLP</h5>
+            <p class="card-text">
+              This project explores the use of machine learning techniques to grade 
+              essay responses in a semi-automated manner. By incorporating semantic 
+              analysis methods, the model evaluates short-essay answers from an 
+              Economics dataset, showcasing potential efficiency improvements 
+              in educational assessment.
+            </p>
+          </div>
+          <div class="card-footer bg-white border-top-0">
+            <a href="https://github.com/gbemike/EssayGradingNLP/blob/main/final_projct.ipynb"
+              class="btn btn-outline-primary" target="_blank">
+              View Project
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project #3 -->
+      <div class="col-md-6">
+        <div class="card h-100 shadow-sm">
+          <img src="assets/images/python_bot.png" class="card-img-top" alt="Python Chatbot">
+          <div class="card-body">
+            <h5 class="card-title">Python Expert Assistant Chat-Bot</h5>
+            <p class="card-text">
+              A chatbot designed to help users learn Python concepts interactively. Built with 
+              LangChain for natural language processing and integrated with Streamlit for a user-friendly interface. 
+              Users can ask questions on various Python topics and receive code snippets or explanations in real time.
+            </p>
+          </div>
+          <div class="card-footer bg-white border-top-0">
+            <a href="https://github.com/gbemike/Python-Bot" 
+              class="btn btn-outline-primary" target="_blank">
+              View Project
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project #4 -->
+      <div class="col-md-6">
+        <div class="card h-100 shadow-sm">
+          <img src="assets/images/exchange rate tracker.webp" class="card-img-top" alt="Exchange Rate Tracker">
+          <div class="card-body">
+            <h5 class="card-title">Exchange Rate Tracker</h5>
+            <p class="card-text">
+              This pipeline monitors currency exchange rates at regular intervals, capturing key metrics 
+              such as Open, High, Low, and Close (OHLC). Featuring automated alerts for threshold breaches 
+              and a Streamlit dashboard for real-time visualization, this project highlights efficient 
+              data extraction and orchestration.
+            </p>
+          </div>
+          <div class="card-footer bg-white border-top-0">
+            <a href="https://github.com/gbemike/binanceTest" 
+              class="btn btn-outline-primary" target="_blank">
+              View Project
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project #5 -->
+      <div class="col-md-6">
+        <div class="card h-100 shadow-sm">
+          <img src="assets/images/nba_data.webp" class="card-img-top" alt="NBA Data Pipeline">
+          <div class="card-body">
+            <h5 class="card-title">NBA Data Pipeline</h5>
+            <p class="card-text">
+              This project automates the collection, transformation, and analysis of NBA player statistics.
+              Using Dagster for orchestration and dbt for data transformations, it compiles over 350 rows 
+              of player stats and loads them into BigQuery for deeper analytics. This streamlined workflow 
+              aids in robust, data-driven insights for basketball performance analysis.
+            </p>
+          </div>
+          <div class="card-footer bg-white border-top-0">
+            <a href="https://github.com/gbemike/nba_pipeline" 
+              class="btn btn-outline-primary" target="_blank">
+              View Project
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Add more col-md-6 blocks for additional projects -->
+    </div>
+  </section>
+
+  <!-- FOOTER / CONTACT INFO -->
+  <footer id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col text-center">
+          <h4>Contact</h4>
+          <p>
+            <strong>Location:</strong> Nigeria<br />
+            <strong>Phone:</strong> +2347064852647<br />
+            <strong>Email:</strong> <a href="mailto:gbemikeolowe02@gmail.com">gbemikeolowe02@gmail.com</a><br />
+			<strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/oluwagbemike-olowe-4037061b0/">gbemike</a> <br />
+
+          </p>
+          <p>
+            <a href="https://github.com/gbemike" class="text-light" target="_blank">GitHub</a>
+          </p>
+          <p class="mt-3">
+            &copy; 2025 Gbemike Olowe
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS (Local) -->
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+</body>
 </html>
