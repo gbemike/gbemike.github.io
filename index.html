@@ -2,263 +2,45 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Gbemike Olowe Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <!-- Bootstrap 5 (Local) -->
-  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-
-  <!-- Custom Styles -->
-  <style>
-    /* ------------------------------
-       NAVBAR
-    ------------------------------ */
-    .navbar-brand {
-      font-weight: 600;
-      font-size: 1.25rem;
-    }
-
-    /* ------------------------------
-       HERO / INTRO SECTION
-    ------------------------------ */
-    .hero-section {
-      position: relative;
-      background: url("assets/images/hero-bg.jpg") center/cover no-repeat;
-      color: #fff;
-      padding: 6rem 1rem;
-      text-align: center;
-    }
-    .hero-section::before {
-      content: "";
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0, 0, 0, 0.4); /* Dark overlay for text contrast */
-      z-index: 1;
-    }
-    .hero-content {
-      position: relative;
-      z-index: 2; /* Ensures text sits above the overlay */
-    }
-    .hero-title {
-      font-size: 3rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-    }
-    .hero-text {
-      font-size: 1.2rem;
-      max-width: 800px;
-      margin: 0 auto 2rem auto;
-    }
-
-    /* ------------------------------
-       ABOUT SECTION
-    ------------------------------ */
-    .about-section img.about-pic {
-      width: 220px;
-      height: 220px;
-      object-fit: cover;
-      border-radius: 50%;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    }
-    .about-section .col-md-4 {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .about-section .col-md-8 {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    /* ------------------------------
-       FOOTER
-    ------------------------------ */
-    footer {
-      background-color: #343a40;
-      color: #fff;
-      padding: 1.5rem 0;
-    }
-    footer a {
-      color: #0d6efd;
-      text-decoration: none;
-    }
-    footer a:hover {
-      color: #fff;
-      text-decoration: underline;
-    }
-  </style>
+  <meta name="description" content="Oluwagbemike Olowe is a data engineer and AI researcher." />
+  <title>Oluwagbemike Olowe</title>
+  <link rel="stylesheet" href="assets/css/site.css" />
 </head>
-<body>
-
-  <!-- NAVBAR (fixed at top) -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="#">Gbemike Olowe</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ms-auto">
-          <!-- If you want a link to the About section in the nav, add it below -->
-          <!-- <li class="nav-item"><a class="nav-link" href="#about">About</a></li> -->
-          <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-          <li class="nav-item"><a class="nav-link" href="https://github.com/gbemike" target="_blank">GitHub</a></li>
-        </ul>
+<body class="simple-page">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a class="wordmark" href="index.html" aria-label="Home">GO<span>.</span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu"><span>Menu</span><span class="menu-icon" aria-hidden="true"><i></i><i></i></span></button>
+      <div class="site-menu" id="site-menu">
+        <a href="index.html" aria-current="page"><span>01</span> Home</a>
+        <a href="writings.html"><span>02</span> Writings</a>
+        <a href="work.html"><span>03</span> Work</a>
       </div>
-    </div>
-  </nav>
+    </nav>
+  </header>
 
-  <!-- HERO SECTION -->
-  <section class="hero-section" id="hero">
-    <div class="hero-content">
-      <h1 class="hero-title">Welcome to My Portfolio</h1>
-      <p class="hero-text">
-        My name is <strong>Gbemike Olowe</strong>. I’m a chill Data and AI Engineer.
-
-      </p>
-      <a href="assets/docs/Gbemike _Olowe_Resume.pdf" download class="btn btn-primary btn-lg">
-        Download My Resume
-      </a>
-    </div>
-  </section>
-
-  <!-- Spacer to avoid hero being hidden behind navbar -->
-  <div style="height: 80px;"></div>
-
-  <!-- ABOUT SECTION -->
-  <section class="container about-section mb-5" id="about">
-    <div class="row">
-      <!-- Profile Pic -->
-      <div class="col-md-4">
-        <img src="assets/images/dp.jpg" alt="Profile Picture" class="about-pic" />
-      </div>
-      <!-- About Text -->
-      <div class="col-md-8">
-        <h2 class="mb-3">About Me</h2>
-        <p>
-          Hello! I’m <strong>Gbemike</strong>, a chill Data and AI Engineer.
-        </p>
-        <p>
-			I’ve built pipelines for everything from finance to sports analytics—always aiming for slick automation and real-time responsiveness. 
-			I’m also passionate about making sure AI benefits real people (especially here in Nigeria) by tackling practical challenges. 
-			Stick around to explore some of my favorite projescts, and feel free to reach out if you’d like to connect! Outside of tech, 
-			I play a lot basketball at least twice a week and game basically everyday.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROJECTS SECTION -->
-  <section class="container mb-5" id="projects">
-    <header class="text-center my-5">
-      <h2 style="font-size: 2rem; font-weight: 700;">Featured Projects</h2>
-      <p>Explore some of my works</p>
+  <main class="simple-main" id="main-content">
+    <header class="simple-intro">
+      <h1>Oluwagbemike Olowe</h1>
+      <p class="pronunciation">[gb]-ay-mee-ke</p>
+      <p class="intro-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. I work across data engineering, applied artificial intelligence, and research, building systems that make complex information easier to understand and use.</p>
+      <div class="simple-links"><a href="https://github.com/gbemike" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a><a href="https://www.linkedin.com/in/oluwagbemike-olowe-4037061b0/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a><a href="assets/docs/My Resume.pdf" download>Résumé <span aria-hidden="true">↓</span></a></div>
     </header>
 
-    <!-- Grid: two columns per row on md+ screens -->
-    <div class="row g-4">
-      <!-- Project #1 -->
-      <div class="col-md-6">
-        <div class="card h-100 shadow-sm">
-          <img src="assets/images/rec.jpeg" class="card-img-top" alt="Movie Recommendation">
-          <div class="card-body">
-            <h5 class="card-title">Implementing Item-Based Collaborative Filtering</h5>
-            <p class="card-text">
-              This project demonstrates how user-item interactions can be leveraged 
-              to build recommendation systems using item-based collaborative filtering. 
-              By analyzing user preferences and similarities between items, the system 
-              recommends relevant content aligned with individual user tastes.
-            </p>
-          </div>
-          <div class="card-footer bg-white border-top-0">
-            <a href="https://github.com/gbemike/itemBasedCollabFiltering/blob/main/itemBasedCf.ipynb"
-              class="btn btn-outline-primary" target="_blank">
-              View Project
-            </a>
-          </div>
-        </div>
-      </div>
+    <section class="simple-section" aria-labelledby="research-title">
+      <h2 id="research-title">Research interests</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. My interests include AI safety, multi-agent oversight, machine learning evaluation, responsible automation, and the systems that shape how intelligent tools behave.</p>
+    </section>
 
-      <!-- Project #4 -->
-      <div class="col-md-6">
-        <div class="card h-100 shadow-sm">
-          <img src="assets/images/exchange rate tracker.webp" class="card-img-top" alt="Exchange Rate Tracker">
-          <div class="card-body">
-            <h5 class="card-title">Exchange Rate Tracker</h5>
-            <p class="card-text">
-              This pipeline monitors currency exchange rates at regular intervals, capturing key metrics 
-              such as Open, High, Low, and Close (OHLC). Featuring automated alerts for threshold breaches 
-              and a Streamlit dashboard for real-time visualization, this project highlights efficient 
-              data extraction and orchestration.
-            </p>
-          </div>
-          <div class="card-footer bg-white border-top-0">
-            <a href="https://github.com/gbemike/binanceTest" 
-              class="btn btn-outline-primary" target="_blank">
-              View Project
-            </a>
-          </div>
-        </div>
-      </div>
+    <section class="simple-section" aria-labelledby="background-title">
+      <h2 id="background-title">Background</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. I studied Management Information Systems and have worked across data engineering, production analytics, and AI research. I am preparing to begin an MSc in Advanced Computer Science at Leeds Beckett University.</p>
+    </section>
+  </main>
 
-      <!-- Project #5 -->
-      <div class="col-md-6">
-        <div class="card h-100 shadow-sm">
-          <img src="assets/images/nba_data.webp" class="card-img-top" alt="NBA Data Pipeline">
-          <div class="card-body">
-            <h5 class="card-title">NBA Data Pipeline</h5>
-            <p class="card-text">
-              This project automates the collection, transformation, and analysis of NBA player statistics.
-              Using Dagster for orchestration and dbt for data transformations, it compiles over 350 rows 
-              of player stats and loads them into BigQuery for deeper analytics. This streamlined workflow 
-              aids in robust, data-driven insights for basketball performance analysis.
-            </p>
-          </div>
-          <div class="card-footer bg-white border-top-0">
-            <a href="https://github.com/gbemike/nba_pipeline" 
-              class="btn btn-outline-primary" target="_blank">
-              View Project
-            </a>
-          </div>
-        </div>
-      </div>
-      <!-- Add more col-md-6 blocks for additional projects -->
-    </div>
-  </section>
-
-  <!-- FOOTER / CONTACT INFO -->
-  <footer id="contact">
-    <div class="container">
-      <div class="row">
-        <div class="col text-center">
-          <h4>Contact</h4>
-          <p>
-            <strong>Location:</strong> Nigeria<br />
-            <strong>Phone:</strong> +2347064852647<br />
-            <strong>Email:</strong> <a href="mailto:gbemikeolowe02@gmail.com">gbemikeolowe02@gmail.com</a><br />
-			<strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/oluwagbemike-olowe-4037061b0/">gbemike</a> <br />
-
-          </p>
-          <p>
-            <a href="https://github.com/gbemike" class="text-light" target="_blank">GitHub</a>
-          </p>
-          <p class="mt-3">
-            &copy; 2025 Gbemike Olowe
-          </p>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Bootstrap JS (Local) -->
-  <script src="assets/js/bootstrap.bundle.min.js"></script>
-
+  <footer class="simple-footer">oluwagbemike olowe @ 2026</footer>
+  <script src="assets/js/site.js"></script>
 </body>
 </html>
